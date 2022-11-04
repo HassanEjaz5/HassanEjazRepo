@@ -15,6 +15,8 @@ import {
     DataTableCell } from "@medicaboo/react-pdf-table";
 
     import data from "./Data";
+    import data2 from "./Data2";
+import { fireEvent } from "@testing-library/react";
   // Create styles
   const styles = StyleSheet.create({
     page: {
@@ -57,14 +59,13 @@ import {
   });
   
   // Create Document Component
-  function BasicDocument() {
-    const {items} = data;
-    const {items2} = data;
-    const {lastTable} = data;
-    items.map((i)=>{
-      console.log(i.h1)
-
-    })
+  function Document2() {
+    const {firstTable} = data2;
+     const {items1} = data2;
+    const {items2} = data2;
+    const {items3} = data2;
+    const {items4} = data2;
+    console.log(items1)
     return (
       // <PDFViewer style={styles.viewer}>
       //   {/* Start of the document*/}
@@ -72,23 +73,38 @@ import {
       //     {/*render a single page*/}
       //     <Page size="A4" style={styles.page}>
       <div style={{marginRight:"20px"}}>
+
+            <Table
+                style={styles.blockHeateTable}
+                data={firstTable}
+              >
+                <TableHeader></TableHeader>
+                    <TableBody>
+                      <DataTableCell style={styles.bhItem} getContent={(i) => i.item1}/>
+                      <DataTableCell style={styles.bhItem} getContent={(i) => i.item2}/>
+                      
+                  </TableBody>
+              </Table>
+
           <Table
               style={styles.section}
-              data={items}
+              data={items1}
             >
                 <TableHeader>
+                    
                     <TableCell style={styles.heading}>
-                        Meter ID
-                    </TableCell>
-                    <TableCell style={styles.heading}>
-                        DC Load
-                    </TableCell>
+                          Meter ID  
+                      </TableCell>
+                      <TableCell style={styles.heading}>
+                          Groung_Solar_Meter
+                      </TableCell>
                 </TableHeader>
                   <TableBody>
                     <DataTableCell style={styles.item} getContent={(i) => i.month}/>
                     <DataTableCell style={styles.item} getContent={(i) => i.days}/>
                     <DataTableCell style={styles.item} getContent={(i) => i.avgperday}/>
-                    <DataTableCell style={styles.item} getContent={(i) => i.month}/>
+                    <DataTableCell style={styles.item} getContent={(i) => i.total}/>
+                    <DataTableCell style={styles.item} getContent={(i) => i.peakdemand}/>
                     
                 </TableBody>
             </Table>
@@ -109,13 +125,14 @@ import {
                       <DataTableCell style={styles.item} getContent={(i) => i.month}/>
                       <DataTableCell style={styles.item} getContent={(i) => i.days}/>
                       <DataTableCell style={styles.item} getContent={(i) => i.avgperday}/>
-                      <DataTableCell style={styles.item} getContent={(i) => i.month}/>
-                      
+                      <DataTableCell style={styles.item} getContent={(i) => i.total}/>
+                    <DataTableCell style={styles.item} getContent={(i) => i.peakdemand}/>
                   </TableBody>
               </Table>
+
             <Table
                 style={styles.section}
-                data={items2}
+                data={items3}
               >
                   <TableHeader>
                       <TableCell style={styles.heading}>
@@ -129,12 +146,34 @@ import {
                       <DataTableCell style={styles.item} getContent={(i) => i.month}/>
                       <DataTableCell style={styles.item} getContent={(i) => i.days}/>
                       <DataTableCell style={styles.item} getContent={(i) => i.avgperday}/>
+                      <DataTableCell style={styles.item} getContent={(i) => i.total}/>
+                    <DataTableCell style={styles.item} getContent={(i) => i.peakdemand}/>
+                      
+                  </TableBody>
+              </Table>
+            <Table
+                style={styles.section}
+                data={items4}
+              >
+                  <TableHeader>
+                      <TableCell style={styles.heading}>
+                          Meter ID  
+                      </TableCell>
+                      <TableCell style={styles.heading}>
+                      Total Site Load(AC+DC)
+                      </TableCell>
+                  </TableHeader>
+                    <TableBody>
                       <DataTableCell style={styles.item} getContent={(i) => i.month}/>
+                      <DataTableCell style={styles.item} getContent={(i) => i.days}/>
+                      <DataTableCell style={styles.item} getContent={(i) => i.avgperday}/>
+                      <DataTableCell style={styles.item} getContent={(i) => i.total}/>
+                    <DataTableCell style={styles.item} getContent={(i) => i.peakdemand}/>
                       
                   </TableBody>
               </Table>
           
-            <Table
+            {/* <Table
                 style={styles.blockHeateTable}
                 data={lastTable}
               >
@@ -144,14 +183,14 @@ import {
                       <DataTableCell style={styles.bhItem} getContent={(i) => i.item2}/>
                       
                   </TableBody>
-              </Table>
+              </Table> */}
             </div>
       //     </Page>
       //   </Document>
       // </PDFViewer>
     );
   }
-  export default BasicDocument;
+  export default Document2;
 
 
 

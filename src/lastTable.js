@@ -50,19 +50,11 @@ const lastTableItem = ({ lastTable }) => {
     console.log("last table: ",lastTable)
   const rows = lastTable.map((item) => (
     <View style={styles.row} >
-       <Text style={styles.description}>{item.month}</Text>
-       <Text style={styles.description}>{item.days}</Text>
-       <Text style={styles.description}>{item.avgperday}</Text>
+       <Text style={styles.description}>{item.item1}</Text>
+       <Text style={styles.description}>{item.item2}</Text>
      </View>
   ));
   return <Fragment>{rows}</Fragment>;
 };
 
 export default lastTableItem;
-    // <View style={styles.row} >
-    //   <Text style={item.sr === 1 ? styles.mainHeading : item.sr === 2 ? styles.subHeading :  styles.description}>{item.c1}</Text>
-    //   <Text style={item.sr === 2 ? styles.subHeading :  styles.description}>{item.c2}</Text>
-    //   <Text style={item.sr === 1 ? styles.mainHeading : item.sr === 2 ? styles.subHeading :  styles.description}>{item.c3}</Text>
-    //   <Text style={item.sr === 2 ? styles.subHeading :  styles.description}>{item.c4}</Text>
-    //   <Text style={item.sr === 2 ? styles.subHeading :  styles.description}>{item.c5}</Text>
-    // </View>

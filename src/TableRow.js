@@ -28,7 +28,11 @@ const styles = StyleSheet.create({
   },
   description: {
     width: '20%',
-    padding: 2,
+    padding: 5,
+    margin: 0,
+    borderRight: '1px solid black',
+    border: '1px solid black',
+    
 
 
   },
@@ -47,7 +51,7 @@ const styles = StyleSheet.create({
 });
 
 const TableRow = ({ items }) => { 
-  const rows = items.map((item) => (
+  const rows = items.map((item, key =items.sr) => (
     item.sr === 1 ?
     <View style={styles.mainHeading}>
       <Text style={styles.item1}>{item.h1}</Text>

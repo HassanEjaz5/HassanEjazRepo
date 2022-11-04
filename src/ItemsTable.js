@@ -1,9 +1,8 @@
 import React from "react";
 import { View, StyleSheet } from "@react-pdf/renderer";
 import TableRow from "./TableRow";
-import lastTable from './lastTable'
 import lastTableItem from "./lastTable";
-import { data2 } from "./Data";
+
 const styles = StyleSheet.create({
   tableContainer: {
     flexDirection: "row",

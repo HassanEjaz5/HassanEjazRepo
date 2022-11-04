@@ -2,6 +2,7 @@ import React from "react";
 import { Page, Document, StyleSheet, PDFViewer, View, Text, Image } from "@react-pdf/renderer";
 import ItemsTable from "./ItemsTable";
 import BasicDocument from "./BasicDocument";
+import Document2 from "./Document2"; 
 
 const styles = StyleSheet.create({
   page: {
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     }
 });
 
-const Table = ({ data }) => (
+const Table2 = ({ data }) => (
     <PDFViewer style={styles.viewer}>
         <Document>
             <Page size="A4" style={styles.page}>
@@ -70,7 +71,7 @@ const Table = ({ data }) => (
                         </Text>
                     </View>
                 </View>
-                <BasicDocument/>
+                <Document2/>
                 {/* <ItemsTable data={data} style={styles.table} /> */}
                 {/* <ItemsTable data={data} style={styles.table}/> */}
                 {/* <ItemsTable data={data} style={styles.table}/> */}
@@ -80,4 +81,4 @@ const Table = ({ data }) => (
     </PDFViewer>
 );
 
-export default Table;
+export default Table2;

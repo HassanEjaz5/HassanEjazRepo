@@ -1,11 +1,11 @@
  const data = {
    //  id: "5df3180a09ea16dc4b95f910",
       items: [
-        {
-          sr: 1,
-          h1: "Meter ID",
-          h2: "DC Load",
-        },
+        // {
+        //   sr: 1,
+        //   h1: "Meter ID",
+        //   h2: "DC Load",
+        // },
         {
           sr: 2,
           month: "Month & Year",
@@ -40,12 +40,12 @@
         },
       ],
       items2: [
-        {
-          sr: 1,
-          h1: "Meter ID",
+        // {
+        //   sr: 1,
+        //   h1: "Meter ID",
           
-          h2: "AC Load",
-        },
+        //   h2: "AC Load",
+        // },
         {
           sr: 2,
           month: "Month & Year",
@@ -56,7 +56,7 @@
         },
         {
           sr: 3,
-          month: "Sep-22",
+          month: "22",
           days: "1",
           avgperday: "47",
           total: "--",
@@ -86,32 +86,32 @@
             item2: 'kWh'
          },
          {
-            item1: 'Block Heater Run(Total)',
-            item2: 'kWh'
+            item1: 'Block Heater Howe Consumption',
+            item2: '--'
          },
          {
-            item1: 'Block Heater Run(Total)',
+            item1: 'Block Heater Load',
             item2: 'kWh'
          },
       ]
     };
   
- export const data2 = {
-   items: [
-      {
-         item1: 'Block Heater Run(Total)',
-         item2: 'kWh'
-      },
-      {
-         item1: 'Block Heater Run(Total)',
-         item2: 'kWh'
-      },
-      {
-         item1: 'Block Heater Run(Total)',
-         item2: 'kWh'
-      },
-   ]
-  }
+//  export const data2 = {
+//    items: [
+//       {
+//          item1: 'Block Heater Run(Total)',
+//          item2: 'kWh'
+//       },
+//       {
+//          item1: 'Block Heater Run(Total)',
+//          item2: 'kWh'
+//       },
+//       {
+//          item1: 'Block Heater Run(Total)',
+//          item2: 'kWh'
+//       },
+//    ]
+//   }
 
   export default data;
 

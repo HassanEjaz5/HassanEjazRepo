@@ -4,14 +4,15 @@ import BasicDocument from './BasicDocument';
 import { PDFViewer } from "@react-pdf/renderer";
 import Table from "./Table";
 import data from "./Data";
+import Table2 from './Table2';
 
 function App() {
   return (
     <div >
       {/* <BasicDocument/> */}
       <Fragment>
-            <Table data={data} />
-            <Table data={data} />
+            <Table />
+            <Table2 />
       </Fragment>
     </div>
   );
