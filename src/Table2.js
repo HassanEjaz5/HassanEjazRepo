@@ -58,7 +58,7 @@ const Table2 = ({ data }) => (
                     </View>
                     <View style={styles.mainHeading}>
                         <Text >
-                            Energy Consumption Report
+                            Energy Report
                         </Text>
 
                     </View>
@@ -72,9 +72,7 @@ const Table2 = ({ data }) => (
                     </View>
                 </View>
                 <Document2/>
-                {/* <ItemsTable data={data} style={styles.table} /> */}
-                {/* <ItemsTable data={data} style={styles.table}/> */}
-                {/* <ItemsTable data={data} style={styles.table}/> */}
+                
             
             </Page>
         </Document>

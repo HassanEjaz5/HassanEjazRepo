@@ -118,7 +118,7 @@ import { fireEvent } from "@testing-library/react";
                           Meter ID  
                       </TableCell>
                       <TableCell style={styles.heading}>
-                          DC Load
+                          Tower_Solar_DC_Meter
                       </TableCell>
                   </TableHeader>
                     <TableBody>
@@ -139,7 +139,7 @@ import { fireEvent } from "@testing-library/react";
                           Meter ID  
                       </TableCell>
                       <TableCell style={styles.heading}>
-                      Total Site Load(AC+DC)
+                        Wind_DC_Meter
                       </TableCell>
                   </TableHeader>
                     <TableBody>
@@ -160,7 +160,7 @@ import { fireEvent } from "@testing-library/react";
                           Meter ID  
                       </TableCell>
                       <TableCell style={styles.heading}>
-                      Total Site Load(AC+DC)
+                      Generator Combined
                       </TableCell>
                   </TableHeader>
                     <TableBody>
